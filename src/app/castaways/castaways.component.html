@@ -1,0 +1,6 @@
+<div *ngFor="let castaway of castaways | async" class="panel panel-default">
+  <div class="panel-body">
+    <h3 (click)="goToDetailPage(castaway)">Name:  {{castaway.name}}<br>Age:  {{castaway.age}}</h3>
+      <hr>
+    </div>
+  </div>

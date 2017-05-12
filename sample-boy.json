@@ -1,0 +1,13 @@
+{ "castaways": [{
+    "name": "Liam",
+    "age": 34,
+    "alliance": "none",
+    "eyeColor": "Blue",
+    "hairColor": "Brown(gray)",
+    "heightFeet": 6,
+    "heightInches": 3,
+    "weight": 200,
+    "violent": false,
+    "intelligence": 8
+  }]
+}
