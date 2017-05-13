@@ -14,4 +14,7 @@ export class CastawayService {
   getCastaways(){
     return this.castaways;
   }
+  addCastaway(newCastaway: Castaway) {
+    this.castaways.push(newCastaway);
+  }
 }

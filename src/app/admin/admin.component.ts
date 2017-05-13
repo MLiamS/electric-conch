@@ -11,14 +11,14 @@ import { CastawayService } from '../castaway.service';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+  constructor(private castawayService: CastawayService) { }
 
   ngOnInit() {
   }
 
   submitForm(name: string, age: number, alliance: string, eyeColor: string, hairColor: string, heightFeet: number, heightInches: number, weight: number, violent: boolean, intelligence: number) {
     var newCastaway: Castaway = new Castaway(name, Number(age), alliance, eyeColor, hairColor, Number(heightFeet), Number(heightInches), Number(weight), violent, Number(intelligence));
-    // this.castawayService.addCastaway(newCastaway);
+    this.castawayService.addCastaway(newCastaway);
     console.log(newCastaway)
   }
 }
