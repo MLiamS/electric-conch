@@ -1,0 +1,68 @@
+<h3 class="panel-heading">new-castaway</h3>
+<div class="panel-body">
+<div>
+  <div>
+    <label>Name:</label>
+    <br>
+    <input #newName>
+  </div>
+  <div>
+    <label>Age:</label>
+    <br>
+    <input #newAge type="number" min="0" step="1" required>
+  </div>
+  <div>
+    <label>Alliance:</label>
+    <br>
+    <select #newAlliance>
+      <option>Ralph</option>
+      <option>Jack</option>
+    </select>
+  </div>
+  <div>
+    <label>Eye Color:</label>
+    <br>
+    <input #newEyeColor>
+  </div>
+  <div>
+    <label>Hair Color:</label>
+    <br>
+    <input #newHairColor>
+  </div>
+  <div>
+    <label>Height in feet</label>
+    <br>
+    <input #newHeightFeet>
+  </div>
+  <div>
+    <label>Inches in height after feet:</label>
+    <br>
+    <input #newHeightInches>
+  </div>
+  <div>
+    <label>Weight:</label>
+    <br>
+    <input #newWeight>
+  </div>
+  <div>
+    <input #newViolent type="checkbox" value="bike">Prone to Violence?<br>
+  </div>
+  <div>
+    <label>Intelligence rated from 1 - 10:</label>
+    <br>
+    <select #newIntelligence>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+    </select>
+  </div>
+</div>
+  <button (click)="submitForm(newName.value, newAge.value, newAlliance.value, newEyeColor.value, newHairColor.value, newHeightFeet.value, newHeightInches.value, newWeight.value, newViolent.value, newIntelligence.value); newName.value=''; newAge.value=''; newEyeColor.value=''; newHairColor.value=''; newHeightFeet.value=''; newHeightInches.value=''; newWeight.value='';newAlliance.value">add-new-castaway</button>
+</div>
