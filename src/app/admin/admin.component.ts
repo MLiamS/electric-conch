@@ -17,7 +17,7 @@ export class AdminComponent implements OnInit {
   }
 
   submitForm(name: string, age: number, alliance: string, eyeColor: string, hairColor: string, heightFeet: number, heightInches: number, weight: number, violent: boolean, intelligence: number) {
-    var newCastaway: Castaway = new Castaway(name, Number(age), alliance, eyeColor, hairColor, Number(heightFeet), Number(heightInches), Number(weight), violent, Number(intelligence));
+    var newCastaway: Castaway = new Castaway(name, Number(age), alliance, eyeColor, hairColor, Number(heightFeet), Number(heightInches), Number(weight), Boolean(Number(violent)), Number(intelligence));
     this.castawayService.addCastaway(newCastaway);
     console.log(newCastaway)
   }
