@@ -17,4 +17,7 @@ export class CastawayService {
   addCastaway(newCastaway: Castaway) {
     this.castaways.push(newCastaway);
   }
+  getCastawayById(castawayId: string){
+    return this.database.object('castaways/' + castawayId);
+  }
 }

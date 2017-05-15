@@ -17,6 +17,10 @@ export class CastawaysComponent implements OnInit {
 
   constructor(private router: Router, private castawayService: CastawayService){}
 
+  goToDetailPage(clickedCastaway) {
+    this.router.navigate(['castaways', clickedCastaway.$key]);
+ };
+
   ngOnInit(){
     this.castaways = this.castawayService.getCastaways();
   }

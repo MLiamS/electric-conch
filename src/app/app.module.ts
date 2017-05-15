@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { CastawaysComponent } from './castaways/castaways.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AdminComponent } from './admin/admin.component';
+import { CastawayDetailComponent } from './castaway-detail/castaway-detail.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -27,7 +28,8 @@ export const firebaseConfig = {
     WarningComponent,
     AboutComponent,
     CastawaysComponent,
-    AdminComponent
+    AdminComponent,
+    CastawayDetailComponent
   ],
   imports: [
     BrowserModule,
