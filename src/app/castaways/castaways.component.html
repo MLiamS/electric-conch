@@ -1,32 +1,30 @@
 <div class="container">
   <div class="col-md-6">
-    <div *ngFor="let castaway of castaways | async" class="panel panel-default">
+    <div *ngFor="let castaway of castaways | async">
       <div *ngIf="castaway.alliance === 'Ralph'">
-        <div class="panel-body">
-          <h3>Name:  {{castaway.name}}<br>Age:  {{castaway.age}}<br>Alliance:  {{castaway.alliance}}<br>Eye Color:  {{castaway.eyeColor}}<br>Hair Color:  {{castaway.hairColor}}<br>Height:  {{castaway.heightFeet}}'{{castaway.heightInches}}"<br>Weight:  {{castaway.weight}}<br>  Prone to violence:  {{castaway.violent}}<br>Intelligence level {{castaway.intelligence}}/10</h3><br>{{castaway.$key}}
-          <button (click)="goToDetailPage(castaway)">Details</button>
-          <hr>
-          <div *ngIf="currentRoute === '/admin'">
-            {{castaway.name}}
-            <hr>
-            <app-edit-castaway [selectedCastaway]="castaway"></app-edit-castaway>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h3>Name:  {{castaway.name}}<br>Age:  {{castaway.age}}</h3>
+            <button (click)="goToDetailPage(castaway)">Details</button>
+            <div *ngIf="currentRoute === '/admin'">
+              <app-edit-castaway [selectedCastaway]="castaway"></app-edit-castaway>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="col-md-6">
-    <div *ngFor="let castaway of castaways | async" class="panel panel-default">
+    <div *ngFor="let castaway of castaways | async">
       <div *ngIf="castaway.alliance === 'Jack'">
-        <div class="panel-body">
-          <h3>Name:  {{castaway.name}}<br>Age:  {{castaway.age}}<br>Alliance:  {{castaway.alliance}}<br>Eye Color:  {{castaway.eyeColor}}<br>Hair Color:  {{castaway.hairColor}}<br>Height:  {{castaway.heightFeet}}'{{castaway.heightInches}}"<br>Weight:  {{castaway.weight}}<br>  Prone to violence:  {{castaway.violent}}<br>Intelligence level {{castaway.intelligence}}/10</h3><br>{{castaway.$key}}
-          <button (click)="goToDetailPage(castaway)">Details</button>
-          <hr>
-          <div *ngIf="currentRoute === '/admin'">
-          {{castaway.name}}
-          <hr>
-          <app-edit-castaway [selectedCastaway]="castaway"></app-edit-castaway>
-        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h3>Name:  {{castaway.name}}<br>Age:  {{castaway.age}}</h3>
+            <button (click)="goToDetailPage(castaway)">Details</button>
+            <div *ngIf="currentRoute === '/admin'">
+              <app-edit-castaway [selectedCastaway]="castaway"></app-edit-castaway>
+            </div>
+          </div>
         </div>
       </div>
     </div>

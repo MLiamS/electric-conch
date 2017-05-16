@@ -1,6 +1,12 @@
-<div>
-  <h3>{{(castawayToDisplay | async)?.name}}</h3>
-  <h4>{{(castawayToDisplay | async)?.age}}</h4>
-  <p>{{(castawayToDisplay | async)?.alliance}}</p>
-  <h1>ADD DETAILS HERE</h1>
+<div class="panel-body">
+  <h3>  Name:  {{(castawayToDisplay | async)?.name}}<br>
+        Age:  {{(castawayToDisplay | async)?.age}}<br>
+        Alliance:  {{(castawayToDisplay | async)?.alliance}}<br>
+        Eye Color:  {{(castawayToDisplay | async)?.eyeColor}}<br>
+        Hair Color:  {{(castawayToDisplay | async)?.hairColor}}<br>
+        Height:  {{(castawayToDisplay | async)?.heightFeet}}"{{(castawayToDisplay | async)?.heightInches}}'<br>
+        Weight:  {{(castawayToDisplay | async)?.weight}} lbs<br>
+        Prone to violence:  {{(castawayToDisplay | async)?.violent}}<br>
+        Intelligence level  {{(castawayToDisplay | async)?.intelligence}}/10<br>
+  </h3>
 </div>
