@@ -24,4 +24,8 @@ export class CastawayService {
     var castawayEntryInFirebase = this.getCastawayById(localUpdatedCastaway.$key);
     castawayEntryInFirebase.update({alliance: localUpdatedCastaway.alliance});
   }
+  deleteCastaway(localCastawayToDelete){
+   var castawayEntryInFirebase = this.getCastawayById(localCastawayToDelete.$key);
+   castawayEntryInFirebase.remove();
+ }
 }

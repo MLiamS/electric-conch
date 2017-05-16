@@ -20,4 +20,10 @@ export class EditCastawayComponent implements OnInit {
   beginUpdatingCastaway(castawayToUpdate){
     this.castawayService.updateCastaway(castawayToUpdate);
   }
+
+  beginDeletingCastaway(castawayToDelete){
+    if(confirm("Are you sure?")){
+      this.castawayService.deleteCastaway(castawayToDelete);
+    }
+  }
 }
