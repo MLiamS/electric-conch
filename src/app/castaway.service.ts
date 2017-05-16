@@ -20,4 +20,8 @@ export class CastawayService {
   getCastawayById(castawayId: string){
     return this.database.object('castaways/' + castawayId);
   }
+  updateCastaway(localUpdatedCastaway){
+    var castawayEntryInFirebase = this.getCastawayById(localUpdatedCastaway.$key);
+    castawayEntryInFirebase.update({alliance: localUpdatedCastaway.alliance});
+  }
 }
