@@ -1,6 +1,12 @@
 <div *ngFor="let castaway of castaways | async" class="panel panel-default">
   <div class="panel-body">
-    <h3 (click)="goToDetailPage(castaway)">Name:  {{castaway.name}}<br>Age:  {{castaway.age}}<br>Alliance:  {{castaway.alliance}}<br>Eye Color:  {{castaway.eyeColor}}<br>Hair Color:  {{castaway.hairColor}}<br>Height:  {{castaway.heightFeet}}'{{castaway.heightInches}}"<br>Weight:  {{castaway.weight}}<br>  Prone to violence:  {{castaway.violent}}<br>Intelligence level {{castaway.intelligence}}/10</h3><br>{{castaway.$key}}
+    <h3>Name:  {{castaway.name}}<br>Age:  {{castaway.age}}<br>Alliance:  {{castaway.alliance}}<br>Eye Color:  {{castaway.eyeColor}}<br>Hair Color:  {{castaway.hairColor}}<br>Height:  {{castaway.heightFeet}}'{{castaway.heightInches}}"<br>Weight:  {{castaway.weight}}<br>  Prone to violence:  {{castaway.violent}}<br>Intelligence level {{castaway.intelligence}}/10</h3><br>{{castaway.$key}}
+    <button (click)="goToDetailPage(castaway)">Edit Alliance</button>
       <hr>
+      <div *ngIf="currentRoute === '/admin'">
+      {{castaway.name}}
+      <hr>
+      <app-edit-castaway [selectedCastaway]="castaway"></app-edit-castaway>
+    </div>
     </div>
   </div>

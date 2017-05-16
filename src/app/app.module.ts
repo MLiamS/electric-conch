@@ -14,6 +14,7 @@ import { CastawaysComponent } from './castaways/castaways.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AdminComponent } from './admin/admin.component';
 import { CastawayDetailComponent } from './castaway-detail/castaway-detail.component';
+import { EditCastawayComponent } from './edit-castaway/edit-castaway.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,7 +30,8 @@ export const firebaseConfig = {
     AboutComponent,
     CastawaysComponent,
     AdminComponent,
-    CastawayDetailComponent
+    CastawayDetailComponent,
+    EditCastawayComponent
   ],
   imports: [
     BrowserModule,
