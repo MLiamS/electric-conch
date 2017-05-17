@@ -1,8 +1,10 @@
+<p>This -->
 <select (change)="onChange($event.target.value)">
-    <option value="all" selected="selected">All</option>
+    <option value="all" selected="selected">Both</option>
     <option value="Jack">Jack</option>
     <option value="Ralph">Ralph</option>
-</select>
+</select> selector will filter castaways by their allegance to either Ralph, Jack, or both.</p>
+
 
 <div class="well">
     <div *ngFor="let castaway of castaways | async | ally:filteredByAlly">
