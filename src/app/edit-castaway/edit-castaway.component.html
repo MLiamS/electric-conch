@@ -2,9 +2,9 @@
 
 <label>Edit Alliance:</label>
 
-<input [(ngModel)]="selectedCastaway.alliance">
-
-
-
+<select [(ngModel)]="selectedCastaway.alliance">
+  <option>Ralph</option>
+  <option>Jack</option>
+</select>
 <button (click)="beginUpdatingCastaway(selectedCastaway)">Update Castaway Alliance</button>
 <button (click)="beginDeletingCastaway(selectedCastaway)">Delete Castaway</button>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { CastawayService} from '../castaway.service';
-// 
+//
 @Component({
   selector: 'app-edit-castaway',
   templateUrl: './edit-castaway.component.html',
@@ -22,7 +22,7 @@ export class EditCastawayComponent implements OnInit {
   }
 
   beginDeletingCastaway(castawayToDelete){
-    if(confirm("Are you sure?")){
+    if(confirm("So they died yeah?")){
       this.castawayService.deleteCastaway(castawayToDelete);
     }
   }

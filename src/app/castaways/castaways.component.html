@@ -1,10 +1,8 @@
-<div class="container">
-  <div class="col-md-6">
+<div class="well">
     <div *ngFor="let castaway of castaways | async">
-      <div *ngIf="castaway.alliance === 'Ralph'">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>Name:  {{castaway.name}}<br>Age:  {{castaway.age}}</h3>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h3>Name:  {{castaway.name}}<br>Age:  {{castaway.age}}</h3>
             <button (click)="goToDetailPage(castaway)">Details</button>
             <div *ngIf="currentRoute === '/admin'">
               <app-edit-castaway [selectedCastaway]="castaway"></app-edit-castaway>
@@ -12,21 +10,4 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
-  <div class="col-md-6">
-    <div *ngFor="let castaway of castaways | async">
-      <div *ngIf="castaway.alliance === 'Jack'">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>Name:  {{castaway.name}}<br>Age:  {{castaway.age}}</h3>
-            <button (click)="goToDetailPage(castaway)">Details</button>
-            <div *ngIf="currentRoute === '/admin'">
-              <app-edit-castaway [selectedCastaway]="castaway"></app-edit-castaway>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
