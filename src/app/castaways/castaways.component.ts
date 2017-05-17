@@ -14,6 +14,7 @@ import { CastawayService } from '../castaway.service';
 export class CastawaysComponent implements OnInit {
   castaways: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
+  filteredByAlly: string = "alliance";
 
   constructor(private router: Router, private castawayService: CastawayService){}
 
@@ -23,6 +24,10 @@ export class CastawaysComponent implements OnInit {
 
   ngOnInit(){
     this.castaways = this.castawayService.getCastaways();
+  };
+
+  onChange(optionFromMenu) {
+    this.filteredByAlly = optionFromMenu;
   }
 
 }

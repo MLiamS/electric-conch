@@ -1,5 +1,11 @@
+<select (change)="onChange($event.target.value)">
+    <option value="all" selected="selected">All</option>
+    <option value="Jack">Jack</option>
+    <option value="Ralph">Ralph</option>
+</select>
+
 <div class="well">
-    <div *ngFor="let castaway of castaways | async">
+    <div *ngFor="let castaway of castaways | async | ally:filteredByAlly">
       <div class="panel panel-default">
         <div class="panel-body">
           <h3>Name:  {{castaway.name}}<br>Age:  {{castaway.age}}</h3>
